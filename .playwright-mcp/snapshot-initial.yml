@@ -1,0 +1,63 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e10]: musadiq@terminal — 0:45
+      - generic [ref=e11]:
+        - generic [ref=e12]: new session
+        - generic [ref=e13]: Ctrl+K
+        - generic [ref=e14]: online
+    - generic [ref=e16]:
+      - generic [ref=e26]:
+        - paragraph [ref=e27]: "> who is musadiq?"
+        - generic [ref=e28]:
+          - button "Expand tool uses" [ref=e30] [cursor=pointer]:
+            - generic [ref=e31]: ●
+            - generic [ref=e32]: 2 tool uses
+            - generic [ref=e33]: ▶
+          - generic [ref=e35]:
+            - generic [ref=e36]:
+              - img "Musadiq Rahman" [ref=e38]
+              - generic [ref=e39]: musadiq.png
+            - generic [ref=e40]:
+              - heading "Syed Musadiq Ur Rahman" [level=1] [ref=e41]:
+                - text: Syed Musadiq
+                - text: Ur Rahman
+              - paragraph [ref=e42]: Agentic AI Developer
+              - paragraph [ref=e43]: building autonomous AI agents and intelligent automation systems
+              - paragraph [ref=e44]: // Islamabad, Pakistan
+              - generic [ref=e45]:
+                - link "GitHub" [ref=e46] [cursor=pointer]:
+                  - /url: https://github.com/MusadiqUrRahman
+                  - img [ref=e47]
+                - link "LinkedIn" [ref=e49] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/syed-musadiq-ur-rahman-548a6b307/
+                  - img [ref=e50]
+                - link "Email" [ref=e52] [cursor=pointer]:
+                  - /url: mailto:syedmusadiq.rahman@gmail.com
+                  - img [ref=e53]
+      - generic [ref=e55]:
+        - paragraph [ref=e56]: "> tell me more about his background"
+        - generic [ref=e57]:
+          - button "Expand tool uses" [ref=e59] [cursor=pointer]:
+            - generic [ref=e60]: ●
+            - generic [ref=e61]: 2 tool uses
+            - generic [ref=e62]: ▶
+          - paragraph [ref=e63]: Musadiq is a final-year Computer Science student and a Certified Agentic & Robotic AI Engineer (CAE) candidate at PIAIC. He builds autonomous AI agents and automation systems using Python, CrewAI, OpenAI Agents SDK, LangChain, and n8n. He is deeply interested in algorithmic trading, LLM-powered tools, and practical digital products that solve real problems.
+      - generic [ref=e64]:
+        - paragraph [ref=e65]: "> cat skills.txt"
+        - generic [ref=e66]:
+          - button "Expand tool uses" [ref=e68] [cursor=pointer]:
+            - generic [ref=e69]: ●
+            - generic [ref=e70]: 2 tool uses
+            - generic [ref=e71]: ▶
+          - generic [ref=e72]:
+            - generic [ref=e73]: ├──Python
+            - generic [ref=e74]: ├──Agentic AI / CrewAI
+            - generic [ref=e75]: ├──OpenAI Agents SDK
+            - generic [ref=e76]: ├──LangChain / LangGraph
+            - generic [ref=e77]: ├──n8n / Automation
+            - generic [ref=e78]: ├──LLMs & GenAI
+            - generic [ref=e79]: ├──Algorithmic Trading
+  - button "Open Next.js Dev Tools" [ref=e22] [cursor=pointer]:
+    - img [ref=e23]
+  - alert [ref=e80]

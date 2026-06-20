@@ -1,26 +1,214 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0f1a;
+  --surface: #141a2a;
+  --foreground: #e2e8f0;
+  --accent: #4a90e2;
+  --highlight: #68b0ff;
+  --gold: #ffb347;
+  --success: #34d399;
+  --dim: #94a6c5;
+  --muted: #5c6d8a;
+  --border: #1e2d4a;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-accent: var(--accent);
+  --color-highlight: var(--highlight);
+  --color-gold: var(--gold);
+  --color-success: var(--success);
+  --color-dim: var(--dim);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-mono: "Geist Mono", monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Geist Mono", monospace;
+}
+
+::selection {
+  background: rgba(74, 144, 226, 0.3);
+  color: var(--foreground);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+/* ─── Ambient Background ─────────────────────────────────────────── */
+
+@keyframes particle-float {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  8% { opacity: 0.6; }
+  85% { opacity: 0.3; }
+  100% { transform: translateY(-100vh) translateX(30px); opacity: 0; }
+}
+
+.animate-particle {
+  animation: particle-float linear infinite;
+}
+
+/* ─── Terminal Glow Border ────────────────────────────────────────── */
+
+@keyframes border-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.terminal-glow::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--accent), var(--gold), var(--accent));
+  background-size: 300% 300%;
+  animation: border-shift 3s ease-in-out infinite;
+  z-index: -1;
+  opacity: 0.25;
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+.terminal-glass {
+  background: rgba(20, 26, 42, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* ─── Cursor ──────────────────────────────────────────────────────── */
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+.cursor-glow {
+  box-shadow: 0 0 10px var(--accent), 0 0 25px rgba(74, 144, 226, 0.25);
+}
+
+/* ─── Fade In ─────────────────────────────────────────────────────── */
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out both;
+}
+
+/* ─── Gold Ring Pulse ──────────────────────────────────────────────── */
+
+@keyframes ring-pulse-gold {
+  0%, 100% { box-shadow: 0 0 50px -10px rgba(255, 179, 71, 0.35); }
+  50% { box-shadow: 0 0 90px -8px rgba(255, 179, 71, 0.6); }
+}
+
+.animate-ring-pulse-gold {
+  animation: ring-pulse-gold 2.5s ease-in-out infinite;
+}
+
+/* ─── Tool Shimmer ────────────────────────────────────────────────── */
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.tool-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(74, 144, 226, 0.06) 25%,
+    rgba(74, 144, 226, 0.12) 50%,
+    rgba(74, 144, 226, 0.06) 75%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* ─── Status Dot Pulse ────────────────────────────────────────────── */
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 4px var(--success); }
+  50% { opacity: 0.5; box-shadow: 0 0 8px var(--success); }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* ─── Section Accent Line ─────────────────────────────────────────── */
+
+.section-accent {
+  position: relative;
+}
+
+.section-accent::after {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* ─── Section Divider ─────────────────────────────────────────────── */
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border), transparent);
+  opacity: 0.6;
+}
+
+/* ─── Reduced Motion ──────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-blink,
+  .animate-fade-in,
+  .animate-particle,
+  .animate-ring-pulse-gold,
+  .animate-pulse-dot,
+  .tool-shimmer,
+  .terminal-glow::before {
+    animation: none !important;
+  }
+  .terminal-glow::before {
+    opacity: 0.12;
+  }
+  .cursor-glow {
+    box-shadow: none;
+  }
+  .animate-ring-pulse-gold {
+    box-shadow: 0 0 50px -10px rgba(255, 179, 71, 0.35);
+  }
 }

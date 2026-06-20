@@ -1,0 +1,32 @@
+[
+  {
+    "id": "vanishchat",
+    "name": "VanishChat",
+    "tagline": "Ephemeral, anonymous, two-person chat. Messages vanish after 60 seconds.",
+    "description": "A privacy-first chat application where conversations disappear completely after 60 seconds. No accounts, no history, no trace. Built with React, Supabase real-time subscriptions, and Tailwind CSS. Features end-to-end encryption for messages in transit, automatic room cleanup, and a zero-data-retention policy.",
+    "longDescription": "VanishChat was born from the need for truly private, temporary conversations. Unlike mainstream messaging apps that store your data indefinitely, VanishChat creates a chat room that exists only for the duration of your conversation. When the last participant leaves or 60 seconds pass after the last message, the room and all its messages are permanently deleted from the database.\n\nTechnical highlights:\n- Real-time messaging via Supabase Realtime (PostgreSQL changes streaming)\n- Row Level Security policies ensure users only access their own chat rooms\n- Automatic cleanup cron job removes stale rooms every minute\n- Responsive design works seamlessly on mobile and desktop\n- Zero authentication — join with just a display name\n- Copy-to-clipboard room codes for easy sharing",
+    "techStack": ["React 18", "Vite", "Tailwind CSS", "Supabase", "React Router"],
+    "liveUrl": "https://vanishchatai.vercel.app/",
+    "repoUrl": "https://github.com/MusadiqUrRahman/VanishChat",
+    "status": "Live",
+    "featured": true,
+    "category": "Privacy Tools",
+    "year": 2026,
+    "icon": "message-square"
+  },
+  {
+    "id": "rcfd-bot",
+    "name": "RCFD Bot",
+    "tagline": "Automated trading bot for Deriv with market analysis, backtesting, and autonomous execution.",
+    "description": "A full-featured algorithmic trading bot designed for the Deriv platform. Handles market analysis, strategy backtesting, optimization, risk management, and fully autonomous trade execution. Built with Python for performance and reliability in live market conditions.",
+    "longDescription": "RCFD Bot is a production-grade automated trading system designed for the Deriv platform (forex, synthetic indices, commodities). It combines technical analysis, statistical modeling, and risk management to execute trades autonomously 24/7.\n\nCore capabilities:\n- Multi-timeframe market analysis using custom indicators\n- Walk-forward backtesting with realistic slippage and commission modeling\n- Genetic algorithm-based strategy optimization\n- Dynamic position sizing with Kelly Criterion and max drawdown limits\n- Real-time risk monitoring with circuit breakers\n- Telegram notifications for trade events and system alerts\n- Dockerized deployment for VPS hosting\n- Comprehensive logging and performance analytics dashboard\n\nThe bot has been stress-tested across multiple market regimes and includes safeguards against API failures, network issues, and unexpected market events.",
+    "techStack": ["Python", "Pandas", "NumPy", "TA-Lib", "Deriv API", "Docker", "PostgreSQL"],
+    "liveUrl": null,
+    "repoUrl": "https://github.com/MusadiqUrRahman/RCFD-Bot",
+    "status": "In Development",
+    "featured": true,
+    "category": "Algorithmic Trading",
+    "year": 2025,
+    "icon": "trending-up"
+  }
+]

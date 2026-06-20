@@ -1,0 +1,9 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e10]: musadiq@terminal — 0:45
+    - generic [ref=e11]:
+      - generic [ref=e12]: new session
+      - generic [ref=e13]: Ctrl+K
+      - generic [ref=e14]: online
+  - button "Open Next.js Dev Tools" [ref=e22] [cursor=pointer]:
+    - img [ref=e23]
